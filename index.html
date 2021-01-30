@@ -1,0 +1,561 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ngân hàng Kiên Long - Sẵn lòng chia sẻ</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/materialdesignicons.css" />
+    <link rel="stylesheet" href="css/materialdesignicons.css.map" />
+    <link rel="stylesheet" href="css/materialdesignicons.min.css" />
+    <link rel="stylesheet" href="css/materialdesignicons.min.css.map" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+    <script src="script/jquery-1.12.4.min.js"></script>
+    <script src="script/owl.carousel.min.js"></script>
+    <script src="script/script.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.recruitment .owl-carousel').owlCarousel({
+                navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
+                margin: 30,
+                autoplay:true,
+                autoplayTimeout:1000,
+                autoplayHoverPause:true,
+                responsive:{
+                    0:{
+                        items:1,
+                        nav:false
+                    },
+                    768:{
+                        items:2,
+                        nav:true,
+                        loop:false
+                    }
+                }
+            });
+            var scrollTrigger = 200, /* px*/
+                backToTop     = function () {
+                    var scrollTop = $(window).scrollTop();
+                    if (scrollTop > scrollTrigger) {
+                        $('header').addClass('fixed-header');
+                    } else {
+                        $('header').removeClass('fixed-header');
+                    }
+                };
+            $(window).on('scroll', function () {
+                backToTop();
+            });
+            $('.list i').on('click', function(){
+                $('.menu-mobile').toggle('slow');
+            })
+            $('#recruitment').on('click', function(){
+                $('.form-recruitment').toggle();
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="header-top">
+                <div class="container">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                        <div class="logo">
+                            <img src="image/logo.png" />
+                        </div>
+                    </div>
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                        <div class="list hidden-md hidden-lg">
+                            <i class="fas fa-bars"></i>
+                        </div>
+                        <div class="customer hidden-xs">
+                            <div class="login">
+                                <a href="#"><i class="far fa-user"></i>Đăng nhập</a>
+                            </div>
+                            <div class="register">
+                                <a href="#"><i class="fas fa-pen"></i>Đăng ký</a>
+                            </div>
+                        </div>
+                        <div class="hotline hidden-xs">
+                            <span class="mdi mdi-phone"></span>
+                            <a href="tel:028.3933.3393" class="hotline-phone">028.3933.3393</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu hidden-sm hidden-xs">
+                <div class="container">
+                    <ul class="main-menu">
+                        <li class="nav-item"><a href="#">Tuyển dụng</a></li>
+                        <li class="nav-item"><a href="#">Chúng tôi là</a></li>
+                        <li class="nav-item"><a href="#">Tại sao chọn kienlongbank</a></li>
+                        <li class="nav-item"><a href="#">Chính sách nhân sự</a></li>
+                        <li class="nav-item"><a href="#">Chương trình đào tạo</a></li>
+                        <li class="nav-item">
+                            <a href="#">Quy định quy trình</a>
+                            <ul class="menu-children">
+                                <li><a href="#">Quy trình tuyển dụng</a></li>
+                                <li><a href="#">Quy định hồ sơ ứng tuyển</a></li>
+                                <li><a href="#">Hướng dẫn tạo hồ sơ</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="#">Đăng ký nhận thông báo</a></li>
+                        <li class="nav-item"><a href="#">Hỏi đáp</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <section class="banner">
+            <img src="image/nhan-vien-kienlongbank-3.jpg" />
+        </section>
+        <section class="job-search">
+            <div class="container">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <i class="fas fa-briefcase icon"></i>
+                    <input type="text" placeholder="Nhập tên kỹ năng, công việc"/>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <i class="fas fa-address-book icon"></i>
+                    <select>
+                        <option value="" selected="selected">Chọn ngành nghề</option>
+                        <option value="">Giao dịch viên</option>
+                        <option value="">Giám đốc PGD</option>
+                        <option value="">Giám đốc chi nhánh</option>
+                    </select>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <i class="fas fa-map-marker-alt icon"></i>
+                    <select>
+                        <option value="" selected="selected">Chọn địa điểm làm việc</option>
+                        <option value="">Hà Nội</option>
+                        <option value="">Hải Phòng</option>
+                        <option value="">Hồ Chí Minh</option>
+                    </select>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <a href="#" class="btn-search"><i class="fas fa-search"></i>Tìm kiếm</a>
+                    <a href="#" class="btn-download"><i class="far fa-file-word"></i>Tải mẫu thông tin ứng viên</a>
+                </div>
+            </div>
+        </section>
+        <section class="career">
+            <div class="container">
+                <div class="group-tabs">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation"><a href="#home" aria-controls="home" class="active show" role="tab" data-toggle="tab">Vị trí tuyển dụng</a></li>
+                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Sinh viên thực tập</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class="career-block">
+                                    <img src="image/nv-nu-hoi-so-(resize).jpg" alt="">
+                                    <div class="career-content">
+                                        <p class="hot">Hot</p>
+                                        <div class="career-title">
+                                            <h5>Nhân viên Xử lý nợ - Tp.HCM</h5>
+                                        </div>
+                                        <div class="career-hover">
+                                            <h5>Nhân viên xử lý nợ - TP>HCM</h5>
+                                            <p><i class="fas fa-map-marker-alt"></i>Nhân viên tại Hội sở</p>
+                                            <p><i class="far fa-clock"></i><a href="staff.html">Xem chi tiết</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class="career-block">
+                                    <img src="image/nv-nu-hoi-so-(resize).jpg" alt="">
+                                    <div class="career-content">
+                                        <p class="hot">Hot</p>
+                                        <div class="career-title">
+                                            <h5>Nhân viên Xử lý nợ - Tp.HCM</h5>
+                                        </div>
+                                        <div class="career-hover">
+                                            <h5>Nhân viên xử lý nợ - TP>HCM</h5>
+                                            <p><i class="fas fa-map-marker-alt"></i>Nhân viên tại Hội sở</p>
+                                            <p><i class="far fa-clock"></i><a href="staff.html">Xem chi tiết</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12 style="margin-top: 20px"">
+                                <div class="career-block">
+                                    <img src="image/nv-nu-hoi-so-(resize).jpg" alt="">
+                                    <div class="career-content">
+                                        <p class="hot">Hot</p>
+                                        <div class="career-title">
+                                            <h5>Nhân viên Xử lý nợ - Tp.HCM</h5>
+                                        </div>
+                                        <div class="career-hover">
+                                            <h5>Nhân viên xử lý nợ - TP>HCM</h5>
+                                            <p><i class="fas fa-map-marker-alt"></i>Nhân viên tại Hội sở</p>
+                                            <p><i class="far fa-clock"></i><a href="staff.html">Xem chi tiết</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12" style="margin-top: 20px">
+                                <div class="career-block">
+                                    <img src="image/nv-nu-hoi-so-(resize).jpg" alt="">
+                                    <div class="career-content">
+                                        <p class="hot">Hot</p>
+                                        <div class="career-title">
+                                            <h5>Nhân viên Xử lý nợ - Tp.HCM</h5>
+                                        </div>
+                                        <div class="career-hover">
+                                            <h5>Nhân viên xử lý nợ - TP>HCM</h5>
+                                            <p><i class="fas fa-map-marker-alt"></i>Nhân viên tại Hội sở</p>
+                                            <p><i class="far fa-clock"></i><a href="staff.html">Xem chi tiết</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12" style="margin-top: 20px">
+                                <div class="career-block">
+                                    <img src="image/nv-nu-hoi-so-(resize).jpg" alt="">
+                                    <div class="career-content">
+                                        <p class="hot">Hot</p>
+                                        <div class="career-title">
+                                            <h5>Nhân viên Xử lý nợ - Tp.HCM</h5>
+                                        </div>
+                                        <div class="career-hover">
+                                            <h5>Nhân viên xử lý nợ - TP>HCM</h5>
+                                            <p><i class="fas fa-map-marker-alt"></i>Nhân viên tại Hội sở</p>
+                                            <p><i class="far fa-clock"></i><a href="staff.html">Xem chi tiết</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12" style="margin-top: 20px">
+                                <div class="career-block">
+                                    <img src="image/nv-nu-hoi-so-(resize).jpg" alt="">
+                                    <div class="career-content">
+                                        <p class="hot">Hot</p>
+                                        <div class="career-title">
+                                            <h5>Nhân viên Xử lý nợ - Tp.HCM</h5>
+                                        </div>
+                                        <div class="career-hover">
+                                            <h5>Nhân viên xử lý nợ - TP>HCM</h5>
+                                            <p><i class="fas fa-map-marker-alt"></i>Nhân viên tại Hội sở</p>
+                                            <p><i class="far fa-clock"></i><a href="staff.html">Xem chi tiết</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="text-center">
+                                <a href="#" class="view-more">XEM THÊM</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="profile">
+                        <div class="row">
+                            <div class="text-center">
+                                <a href="#" class="view-more">XEM THÊM</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+        <section class="education">
+            <div class="container">
+                <div class="row education-title">
+                    <div class="text-center">
+                        <h2>Hướng dẫn dự tuyển</h2>
+                        <p>Ứng viên thực hiện theo hướng dẫn sau</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="block-step">
+                            <div class="block-step-image">
+                                <img src="image/home_reg_1.png" alt=""/>
+                            </div>
+                            <div class="blog-step-content">
+                                <h3>Cách 1</h3>
+                                <div class="text-center">
+                                    Click vào nút <span class="text-lightcolor">“Ứng tuyển”</span> tại màn hình chi tiết của vị trí tuyển dụng
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="block-step">
+                            <div class="block-step-image">
+                                <img src="image/home_reg_2.png" alt=""/>
+                            </div>
+                            <div class="blog-step-content">
+                                <h3>Cách 2</h3>
+                                <div class="text-center">
+                                    Tải <span class="text-lightcolor">Thông tin ứng viên</span> và gửi về <a href="mailto:tuyendung@kienlongbank.com">tuyendung@kienlongbank.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="block-step">
+                            <div class="block-step-image">
+                                <img src="image/home_reg_3.png" alt=""/>
+                            </div>
+                            <div class="blog-step-content">
+                                <h3>Cách 3</h3>
+                                <div class="text-center">
+                                    <span class="text-lightcolor">Nộp hồ sơ trực tiếp</span> tại địa chỉ 98-108A Cách Mạng Tháng Tám, P.7, Q.3, TP.HCM
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row education-title">
+                    <div class="text-center">
+                        <h2>Quy trình tuyển dụng</h2>
+                        <p>Kienlongbank sẽ liên hệ các ứng viên phù hợp với tiêu chí tuyển dụng</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="list-item">
+                        <div class="item">
+                            <div class="item-title">
+                                <img src="./image/1.png" alt="">
+                                <span>Tham gia ứng tuyển</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item-title">
+                                <img src="./image/2.png" alt="">
+                                <span>Tiếp nhận và sàng lọc hồ sơ</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item-title">
+                                <img src="./image/3.png" alt="">
+                                <span>Tham gia phỏng vấn</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item-title">
+                                <img src="./image/4.png" alt="">
+                                <span>Thông báo quyết định tuyển dụng</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item-title">
+                                <img src="./image/5.png" alt="">
+                                <span>Hoàn thiện hồ sơ sau khi tuyển dụng</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="recruitment">
+            <div class="container">
+                <div class="row">
+                    <div class="text-center">
+                        <h2>Chia sẻ của nhân viên Kienlongbank</h2>
+                    </div>
+                </div>
+                <div class="owl-carousel">
+                    <div class="item">
+                        <div class="recruitment-image">
+                            <img src="image/tran-thi-thanh-kienlongbank-truyen-thong-marketing-1.jpg" alt="" />
+                        </div>
+                        <div class="recruitment-content">
+                            <h5 class="name">Trần Thị Thanh</h5>
+                            <p class="position">Trưởng bộ phận Truyền thông</p>
+                            <p class="quote">Tôi cảm nhận được khi làm việc tại nơi này đó chính là sự thân thiện của các cấp Lãnh đạo cư xử với nhau như một gia đình.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="recruitment-image">
+                            <img src="image/tran-thi-thanh-kienlongbank-truyen-thong-marketing-1.jpg" alt="" />
+                        </div>
+                        <div class="recruitment-content">
+                            <h5 class="name">Trần Thị Thanh</h5>
+                            <p class="position">Trưởng bộ phận Truyền thông</p>
+                            <p class="quote">Tôi cảm nhận được khi làm việc tại nơi này đó chính là sự thân thiện của các cấp Lãnh đạo cư xử với nhau như một gia đình.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="recruitment-image">
+                            <img src="image/tran-thi-thanh-kienlongbank-truyen-thong-marketing-1.jpg" alt="" />
+                        </div>
+                        <div class="recruitment-content">
+                            <h5 class="name">Trần Thị Thanh</h5>
+                            <p class="position">Trưởng bộ phận Truyền thông</p>
+                            <p class="quote">Tôi cảm nhận được khi làm việc tại nơi này đó chính là sự thân thiện của các cấp Lãnh đạo cư xử với nhau như một gia đình.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="recruitment-image">
+                            <img src="image/tran-thi-thanh-kienlongbank-truyen-thong-marketing-1.jpg" alt="" />
+                        </div>
+                        <div class="recruitment-content">
+                            <h5 class="name">Trần Thị Thanh</h5>
+                            <p class="position">Trưởng bộ phận Truyền thông</p>
+                            <p class="quote">Tôi cảm nhận được khi làm việc tại nơi này đó chính là sự thân thiện của các cấp Lãnh đạo cư xử với nhau như một gia đình.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="blog">
+            <div class="container">
+                <div class="row">
+                    <div class="text-center">
+                        <h2>Tin tuyển dụng</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <a href="#" class="blog-image"><img src="image/chuong-trinh-dao-tao-boi-duong-nang-cao-nang-luc-quan-ly.jpg" alt="" /></a>
+                        <div class="blog-title"><a href="#">Kienlongbank tổ chức Lớp “Bồi dưỡng nâng cao năng lực quản lý”</a></div>
+                        <div class="time">14.07.2020</div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <a href="#" class="blog-image"><img src="image/chuong-trinh-office-tour-11.jpg" alt="" /></a>
+                        <div class="blog-title"><a href="#">Kienlongbank: Hơn 200 sinh viên Đại học Tôn Đức Thắng tham gia chương trình Office Tour</a></div>
+                        <div class="time">12.06.2020</div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <a href="#" class="blog-image"><img src="image/ban-lanh-dao-chup-luu-niem-cung-hoc-vien-1.jpg" alt="" /></a>
+                        <div class="blog-title"><a href="#">Kienlongbank khai mạc khóa đào tạo, huấn luyện theo chức danh K.24</a></div>
+                        <div class="time">17.09.2019</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="text-center">
+                        <a href="#" class="view-more">XEM THÊM</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-top">
+                <div class="container">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="menu-footer">
+                            <div class="menu-footer-title">Kienlongbank.com</div>
+                            <ul>
+                                <li><a href="#">Tổng quan Kienlongbank</a></li>
+                                <li><a href="#">Tầm nhìn, sứ mệnh, giá trị cốt lõi</a></li>
+                                <li><a href="#">Quá trình hình thành và phát triển</a></li>
+                                <li><a href="#">Bạn cần gì</a></li>
+                                <li><a href="#">Khuyến mãi nổi bật</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="menu-footer">
+                            <div class="menu-footer-title">Chương trình đào tạo</div>
+                            <ul>
+                                <li><a href="#">Chương trình đào tạo chuyên nghiệp</a></li>
+                                <li><a href="#">Chương trình thực tập</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="menu-footer">
+                            <div class="menu-footer-title">Chức năng</div>
+                            <ul>
+                                <li><a href="#">Đăng nhập</a></li>
+                                <li><a href="#">Đăng ký</a></li>
+                                <li><a href="#">Đăng ký nhận thông báo</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="col-md-3 col-sm-3 col-xs-12">
+                        <div class="logo-footer">
+                            <img src="image/logo.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="intro-header">
+                            <div class="footer-bottom-title">
+                                <h6>Ngân hàng TMCP Kiên Long (Kienlongbank)</h6>
+                            </div>
+                            <div class="intro-description">
+                                <p>Hội sở: 40-42-44 Phạm Hồng Thái, P.Vĩnh Thanh Vân, Tp.Rạch Giá, T.Kiên Giang</p> 
+                                <p>Tp. HCM: 98-108A Cách Mạng Tháng 8, P.7, Q.3, Tp.HCM</p>
+                                <p>Điện thoại: (028) 3933 3393</p>
+                                <p>Hotline gọi trong lãnh thổ Việt Nam: 1900 6929</p>
+                                <p>Hotline gọi từ nước ngoài về Việt Nam: (+84) 287309 6929</p>
+                                <p>Mã SWIFT: KLBKVNVX</p>
+                                <p>Email: tuyendung@kienlongbank.com hoặc kienlong@kienlongbank.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-sm-12">
+                        <div class="footer-contact">
+                            <div class="footer-bottom-title">
+                                <h6>Liên kết nhanh</h6>
+                            </div>
+                            <ul class="social-footer">
+                                <li><a href="#"><img src="image/kienlongbank-smartphone-icon-2.png" alt=""></a></li>
+                                <li><a href="#"><img src="image/kienlongbank-facebook-icon-2.png" alt=""></a></li>
+                                <li><a href="#"><img src="image/kienlongbank-youtube-icon-4.png" alt=""></a></li>
+                                <li><a href="#"><img src="image/icon-zalo-kienlongbank-3.png" alt=""></a></li>
+                            </ul>
+                            <div class="footer-bottom-title">
+                                <h6>Kienlongbank Mobile Banking</h6>
+                            </div>
+                            <div class="pay">
+                                <a href="#"><img src="image/app-store-icon-kienlongbank-mobile-banking.png" alt=""></a>
+                                <a href="#"><img src="image/google-play-icon-kienlongbank-mobile-banking.png" alt=""></a>
+                                <img src="image/qr-code-kienlongbank-mobile-banking-1.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container">
+                    <div class="col-md-3 col-sm-3 col-xs-12">
+                        <span class="copyright-text">
+                            Copyright © 2018 Kienlongbank. All right reserved.
+                        </span>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="copyright-menu">
+                            <ul>
+                                <li><a href="#">Điều khoản</a></li>
+                                <li><a href="#">Bảo mật</a></li>
+                                <li><a href="#">Mail KLB</a></li>
+                                <li><a href="#">Sơ đồ trang</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <section class="menu-mobile">
+        <ul>
+            <li><a href="#">Tuyển dụng</a></li>
+            <li><a href="#">Chúng tôi là</a></li>
+            <li><a href="#">Tại sao chọn kienlongbank</a></li>
+            <li><a href="#">Chính sách nhân sự</a></li>
+            <li><a href="#">Quy định quy trình</a></li>
+        </ul>
+    </section>
+</body>
+
+</html>
