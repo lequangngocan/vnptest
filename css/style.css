@@ -858,3 +858,8 @@ a:hover, a:focus {
     font-weight: 700;
     border-bottom: 1px solid #0f848d;
   }
+@media(max-width: 1024px){
+  .list-job, .list-job .container {
+    padding: 0;
+  }
+}
